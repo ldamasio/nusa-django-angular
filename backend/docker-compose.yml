@@ -1,0 +1,7 @@
+version: "3"
+services:
+  schemalaspy:
+    container_name: nusaDiagram
+    image: schemaspy/schemaspy
+    volumes:
+    - ./diagrams/schemaspy.properties:/schemaspy.properties"
