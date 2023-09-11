@@ -1,36 +1,19 @@
-<button mat-fab extended>
-  <mat-icon>home</mat-icon>
-  Home
-</button>
+<main>
+  <header>
+    Nusa PEP 2023
+  </header>
+  <nav>
+    <!-- <app-navbar></app-navbar> -->
+    <ul>
+      <li><a routerLink="/pacientes" routerLinkActive="active" ariaCurrentWhenActive="page">Pacientes</a></li>
+      <li><a routerLink="/medicamentos" routerLinkActive="active" ariaCurrentWhenActive="page">Medicamentos</a></li>
+    </ul>
+  </nav>
+  <section class="content">
+    <!-- <app-home>
+    </app-home> -->
 
-<button mat-fab extended>
-  <mat-icon>medication</mat-icon>
-  Medicamentos
-</button>
+    <router-outlet></router-outlet>
 
-<button mat-fab extended>
-  <mat-icon>personal_injury</mat-icon>
-  Pacientes
-</button>
-
-<button mat-fab extended>
-  <mat-icon>medical_information</mat-icon>
-  Criar Nova Receita
-</button>
-
-Olá, User
-<button mat-fab extended>
-  <mat-icon>account_circle</mat-icon>
-  Configurações da Conta  
-</button>
-
-
-
-<br><br>
-
-<h1>Lista de Receitas Médicas</h1>
-<mat-slide-toggle>Filtrar por paciente</mat-slide-toggle>
-<br>
-<input type="text" placeholder="Nome do Paciente">
-<br>
-Tabela de receitas.
+  </section>
+</main>
