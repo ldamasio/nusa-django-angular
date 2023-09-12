@@ -3,13 +3,11 @@
 <table mat-table class="mat-elevation-z8 table">
   <tbody>
     <tr>
-      <td>ID</td>
       <td>Nome</td>
       <td>Categoria</td>
       <td>Código ANVISA</td>
     </tr>
     <tr *ngFor="let medicamento of medicamentos$ | async">
-      <td mat-cell > {{medicamento.id}} </td>
       <td mat-cell > {{medicamento.name}} </td>
       <td mat-cell > {{medicamento.category}} </td>
       <td mat-cell > {{medicamento.anvisa_code}} </td>

@@ -1,9 +1,13 @@
-.form {
-  min-width: 150px;
-  max-width: 500px;
+table {
   width: 100%;
+  border-collapse: collapse;
 }
-
-.full-width {
-  width: 100%;
+td { 
+  border: solid thin;
+  padding:3px;
+}
+.create {
+  border: solid thin;
+  margin: 20px;
+  padding: 10px;
 }

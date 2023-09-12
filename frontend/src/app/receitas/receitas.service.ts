@@ -1,21 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environment/environment';
-import { IMedicamentos } from './medicamentos.interface';
+import { IReceitas } from './receitas.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class MedicamentosService {
+export class ReceitasService {
 
   private url = environment.apiPath;
 
   constructor(private httpClient: HttpClient) { 
   }
 
-  obterTodosMedicamentos() {
-    return this.httpClient.get<IMedicamentos[]>(`${this.url}medicamentos`)
+  obterTodasReceitas() {
+    return this.httpClient.get<IReceitas[]>(`${this.url}receitas`)
   }
 
 }

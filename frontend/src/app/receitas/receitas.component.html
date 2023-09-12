@@ -1,0 +1,14 @@
+<H1>RECEITAS MÉDICAS</H1>
+
+<table mat-table class="mat-elevation-z8 table">
+  <tbody>
+    <tr>
+      <td>Nome do Paciente</td>
+      <td>Lista de Medicamentos</td>
+    </tr>
+    <tr *ngFor="let receita of receitas$ | async">
+      <td mat-cell > {{receita.paciente}} </td>
+      <td mat-cell > {{receita.medicamentos}} </td>
+    </tr>
+  </tbody>
+</table>
