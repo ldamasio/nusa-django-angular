@@ -16,6 +16,7 @@ import { ReceitasComponent } from './receitas/receitas.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
 import { MedicamentosComponent } from './medicamentos/medicamentos.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ReceitasComponent,
     PacientesComponent,
     MedicamentosComponent,
-    NavbarComponent
+    NavbarComponent,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

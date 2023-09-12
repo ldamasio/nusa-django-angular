@@ -1,28 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environment/environment';
-import { IPacientes } from './pacientes.interface';
+import { IMedicamentos } from './medicamentos.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class PacientesService {
+export class MedicamentosService {
 
   private url = environment.apiPath;
 
   constructor(private httpClient: HttpClient) { 
   }
 
-  obterTodosPacientes() {
-    return this.httpClient.get<IPacientes[]>(`${this.url}pacientes`)
+  obterTodosMedicamentos() {
+    return this.httpClient.get<IMedicamentos[]>(`${this.url}medicamentos`)
   }
 
-  cadastrarPaciente(paciente: IPacientes) {
+  cadastrarMedicamento(medicamento: IMedicamentos) {
     let headers = { 'Content-Type': 'application/json' };
-    return this.httpClient.post<IPacientes>(
-      `${this.url}pacientes`, 
-      paciente,
+    return this.httpClient.post<IMedicamentos>(
+      `${this.url}medicamentos`, 
+      medicamento,
       { headers }
     )
   }

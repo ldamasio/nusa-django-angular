@@ -1,8 +1,13 @@
-.table {
+table {
   width: 100%;
   border-collapse: collapse;
 }
 td { 
   border: solid thin;
   padding:3px;
+}
+.create {
+  border: solid thin;
+  margin: 20px;
+  padding: 10px;
 }
