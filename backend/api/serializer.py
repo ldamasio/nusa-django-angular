@@ -14,6 +14,8 @@ class MedicamentoSerializer(serializers.ModelSerializer):
 
 
 class ReceitaSerializer(serializers.ModelSerializer):
+    medicamentos = serializers.StringRelatedField(many=True)
+    paciente = serializers.CharField(source="paciente.name", read_only=True)
     class Meta:
         model = Receita
         fields = ('id', 'paciente', 'medicamentos', 'created_at')
