@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
-  apiKey: 'devKey',
+  production: false,
+  apiKey: 'prodKey',
   apiPath: "http://localhost:8000/api/"
 };

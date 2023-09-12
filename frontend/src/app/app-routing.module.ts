@@ -4,12 +4,16 @@ import { HomeComponent } from './home/home.component';
 import { ReceitasComponent } from './receitas/receitas.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
 import { MedicamentosComponent } from './medicamentos/medicamentos.component';
+import { LoginComponent } from './login/login.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'receitas', component: ReceitasComponent },
   { path: 'pacientes', component: PacientesComponent },
   { path: 'medicamentos', component: MedicamentosComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'settings', component: SettingsComponent },
 ];
 
 @NgModule({

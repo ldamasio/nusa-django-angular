@@ -2,14 +2,16 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-medicamentos',
+  selector: 'app-settings',
   standalone: true,
   imports: [CommonModule],
   template: `
-      medi
-    `,
-  styleUrls: ['./medicamentos.component.scss']
+    <p>
+      settings works!
+    </p>
+  `,
+  styleUrls: ['./settings.component.scss']
 })
-export class MedicamentosComponent {
+export class SettingsComponent {
 
 }

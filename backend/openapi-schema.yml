@@ -3,6 +3,411 @@ info:
   title: ''
   version: ''
 paths:
+  /api/pacientes/:
+    get:
+      operationId: listPacientes
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Paciente'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createPaciente
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Paciente'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Paciente'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Paciente'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Paciente'
+          description: ''
+      tags:
+      - api
+  /api/paciente/{id}/:
+    get:
+      operationId: retrievePaciente
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this paciente.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Paciente'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updatePaciente
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this paciente.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Paciente'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Paciente'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Paciente'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Paciente'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdatePaciente
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this paciente.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Paciente'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Paciente'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Paciente'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Paciente'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyPaciente
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this paciente.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/medicamentos/:
+    get:
+      operationId: listMedicamentos
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Medicamento'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createMedicamento
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Medicamento'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Medicamento'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Medicamento'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Medicamento'
+          description: ''
+      tags:
+      - api
+  /api/medicamento/{id}/:
+    get:
+      operationId: retrieveMedicamento
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this medicamento.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Medicamento'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateMedicamento
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this medicamento.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Medicamento'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Medicamento'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Medicamento'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Medicamento'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateMedicamento
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this medicamento.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Medicamento'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Medicamento'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Medicamento'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Medicamento'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyMedicamento
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this medicamento.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/receitas/:
+    get:
+      operationId: listReceitas
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Receita'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createReceita
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Receita'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Receita'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Receita'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Receita'
+          description: ''
+      tags:
+      - api
+  /api/receita/{id}/:
+    get:
+      operationId: retrieveReceita
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this receita.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Receita'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateReceita
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this receita.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Receita'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Receita'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Receita'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Receita'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateReceita
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this receita.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Receita'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Receita'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Receita'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Receita'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyReceita
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this receita.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
   /api/token/:
     post:
       operationId: createMyTokenObtainPair
@@ -58,6 +463,71 @@ paths:
       - api
 components:
   schemas:
+    Paciente:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        birth:
+          type: string
+          format: date
+        cpf_code:
+          type: string
+          maxLength: 255
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - name
+      - birth
+      - cpf_code
+    Medicamento:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        category:
+          type: string
+          maxLength: 255
+        anvisa_code:
+          type: string
+          maxLength: 255
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - name
+      - category
+      - anvisa_code
+    Receita:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        paciente:
+          type: integer
+        medicamentos:
+          type: array
+          items:
+            type: integer
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - paciente
+      - medicamentos
     MyTokenObtainPair:
       type: object
       properties:
